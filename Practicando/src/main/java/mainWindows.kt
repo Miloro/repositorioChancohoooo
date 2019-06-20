@@ -25,6 +25,7 @@ class FileMainWindows(model : FileSearch) : MainWindow<FileSearch>(model){
         val boton = Button(panel2)
                 .setCaption("buscar")
                 .setAsDefault()
+                .onClick{model.source.searchFiles()}
 
         val panel3 = Panel(mainPanel)
         val table = Table<File>(panel3,File::class.java)
